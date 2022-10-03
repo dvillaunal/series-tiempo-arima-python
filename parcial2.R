@@ -8,10 +8,10 @@ library(tidyverse)
 library(magrittr)
 library(zoo)
 
-datos_parcial2 <- read_excel("datos_parcial2.xlsx", 
+df1 <- read_excel("datos_parcial2.xlsx", 
                              sheet = "serie1")
 
-t <- datos_parcial2$valor %>% ts(., start = c(2021,1), frequency = 365)
+t <- df1$valor %>% ts(., start = c(2021,1), frequency = 365)
 
 diff(t)
 
@@ -25,4 +25,22 @@ pacf(t)
 acf(diff(t))
 pacf(diff(t))
 
-2040-2021
+df2 <- read_excel("datos_parcial2.xlsx", 
+                  sheet = "serie2")
+
+df3 <- read_excel("datos_parcial2.xlsx", 
+                  sheet = "serie3")
+
+
+df3 <- df3[order(df3$fecha, decreasing = F),]
+
+df3 %>%  summary()
+
+t2 <- ts(df2$value,start = c(2020,1), frequency = 365)
+
+t3 <- ts(df3$registro,start = c(2019,1), frequency = 365)
+
+m2 <- auto.arima(t2)
+
+jarque.bera.test(m2$residuals)
+
