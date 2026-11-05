@@ -63,13 +63,11 @@ En cada punto se piden conclusiones argumentadas.
 .
 ├── Parcial2_series_tiempo.ipynb   # Notebook principal con la solución completa
 ├── Parcial2_series_tiempo.html    # Notebook exportado a HTML
-├── Parcial2_series_tiempo.pdf     # Notebook exportado a PDF
 ├── datos_parcial2.xlsx            # Datos: hojas serie1, serie2 y serie3
 ├── parcial2.R                     # Verificación exploratoria en R (auto.arima, Ljung-Box, Jarque-Bera)
 ├── Dickey_Fuller.png, ljung_Box.png, S3_m13_summary.png, S3_m16_summary.png  # Figuras usadas en el notebook
 ├── Clase_10_python.ipynb, PRESENTACION 13.ipynb, PRESENTACION 14.ipynb       # Notebooks de clase de referencia
-├── Presentacion_11.pdf, Presentacion_12.pdf                                  # Diapositivas del curso
-└── parcial2_TimeSeries.zip        # Copia comprimida de la entrega (html, ipynb y pdf)
+└── Presentacion_11.pdf, Presentacion_12.pdf                                  # Diapositivas del curso
 ```
 
 ## Cómo reproducir
